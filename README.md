@@ -18,8 +18,7 @@ This repository contains the code for a chest X-ray image classification project
 - [Usage](#usage)
 - [Results](#results)
 - [Comparison with Kaggle Project](#comparison-with-kaggle-project)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 Pneumonia is a severe respiratory infection that affects the lungs. Early detection of pneumonia through chest X-ray images is crucial for timely treatment. This project explores the implementation of a machine learning model using the VGG16 architecture to classify chest X-ray images into pneumonia and normal categories.
