@@ -36,20 +36,53 @@ The dataset used for this project is sourced from [Kaggle](https://www.kaggle.co
 ## Getting Started
 To get started with this project, follow these steps:
 
-1. Clone this repository to your local machine:
-   
-   git clone https://github.com/your-username/chest-xray-classification.git
-   
+1. **Mount Google Drive:**
+   Make sure you have the dataset and necessary files uploaded to your Google Drive. Run the following code in Google Colab to mount your Google Drive and access the files:
 
-2. Navigate to the project directory:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+   ```
 
-   cd chest-xray-classification
-  
+2. **Set Working Directory:**
+   Set your working directory to the folder containing your project files using the following code. Replace `'/content/drive/My Drive/Chest_xray2'` with the correct path to your project folder.
 
-3. Install the required packages using `pip`:
-   
-   pip install -r requirements.txt
-   
+   ```python
+   os.chdir('/content/drive/My Drive/Chest_xray2')
+   ```
+
+3. **Install Required Packages:**
+   Ensure you have all the required Python packages installed. If you haven't already installed the necessary packages, you can create a `requirements.txt` file with the required packages and run the following command in a code cell:
+
+   ```python
+   !pip install -r requirements.txt
+   ```
+
+4. **Run the Jupyter Notebook:**
+   Open and run the Jupyter Notebook file `Chest_Xray_Image_Classification.ipynb` in Google Colab. The notebook contains all the code for data processing, model training, evaluation, and predictions.
+
+5. **Follow Notebook Instructions:**
+   Inside the notebook, follow the instructions provided in markdown cells and code comments. Pay attention to the comments explaining each code block, and execute the cells sequentially.
+
+6. **Note on Saved Model:**
+   The model will be saved to your Google Drive at the end of the notebook execution. You can load this saved model for making predictions in the future. The saved model file will be named `my_model.h5` and will be located in the same directory where your notebook is running.
+
+7. **Predictions:**
+   After training the model, you can use the `predict(img_name)` function to make predictions on individual chest X-ray images. Provide the path to the image file as the argument to the `predict()` function. For example:
+
+   ```python
+   predict('/content/drive/My Drive/Chest_xray2/train/PNEUMONIA/person7_bacteria_29.jpeg')
+   ```
+
+   This function will display the image and print the predicted diagnosis (Normal or Pneumonia).
+
+8. **Review Predictions:**
+   The notebook also contains code for displaying predictions on validation and test images. You can review the model's performance on these images by running the corresponding code cells.
+
+9. **Future Tasks:**
+   The notebook suggests future tasks related to image distribution correction, creating a confusion matrix, and looking for the F1 score. You can explore these tasks for further analysis and improvement.
+
+Make sure to adapt the file paths and folder names in the code according to your specific project structure. Also, ensure that the necessary dataset files are available in the specified directories.
 
 ## Usage
 1. Run the Jupyter Notebook `Chest_Xray_Image_Classification.ipynb` in Google Colab.
